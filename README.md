@@ -35,7 +35,9 @@ Para instalar Jenkins, se requiere la creación de la carpeta `agent`, y dentro 
 ![alt text](img/image7.png)
 
 Pipeline básico "Hello World"
-Creamos un nuevo Job en Jenkins llamado Hello World, utilizando la opción Pipeline.
+Creamos un dentro de agent JenkingFileHelloWord 
+Configuramos la pagina de Jenkins con el Token de GitHub mediante Pipeline Script from SCM 
+Se sincronisara el nuevo Job en Jenkins llamado Hello World, utilizando la opción Pipeline.
 
 
 El archivo Jenkinsfile debe estar en su repositorio, en un apartado específico.
