@@ -1,0 +1,31 @@
+services:
+  api01:
+    build: 
+      context: ./api
+    container_name: app1
+    environment:
+      - PORT=3000
+    expose:
+      - 3000
+
+  api02:
+    build: 
+      context: ./api
+    container_name: app2
+    environment:
+      - PORT=3000
+    expose:
+      - 3000
+
+  web:
+    image: nginx:alpine
+    container_name: nginx-balancer
+    ports:
+      - "4002:80"
+    volumes:
+      - ./nginx/backend.conf:/etc/nginx/conf.d/backend.conf
+    depends_on:
+      - api01
+      - api02
+
+ 
